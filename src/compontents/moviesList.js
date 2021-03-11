@@ -2,27 +2,11 @@ import React from 'react'
 import './style.css'
 import MovieCard from './movieCard'
 
-const movieArr = [
-  {
-    id:'uuid_1',
-    title:  'title1',
-    desc: 'desc1'
-  },  
-  {
-    id:'uuid_2',
-    title:  'title2',
-    desc: 'desc2'
-  },  
-  {
-    id:'uuid_3',
-    title:  'title3',
-    desc: 'desc3'
-  }]
 
-export default function MovicesList() {
+export default function MovicesList(movies) {
   return (
     <>
-      {movieArr.map(movie => (
+      {movies.map(movie => (
         <MovieCard title={movie.title} desc={movie.desc} key={movie.id} />
         ))}
     </>
